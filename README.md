@@ -9,32 +9,26 @@ LoRA fine-tuning of Qwen2.5-Coder-1.5B-Instruct on DEEP-5K dataset for competiti
 
 ## Dataset Split
 
-### Original Split
-- **Total:** 4,985 examples
-- **Train:** 4,505 examples (90.4%)
-- **Test:** 480 examples (9.6%)
-
-### Our Split (Stratified by Difficulty)
 - **Train:** 4,279 examples (95%)
 - **Validation:** 226 examples (5%)
-- **Test:** 480 examples (9.6%)
+- **Test:** 480 examples
 
 ### Difficulty Distribution
 
-| Difficulty | Train | Validation | Test | Split Ratio |
-|------------|-------|------------|------|-------------|
-| 1 | 204 | 11 | 480 | 5.4% |
-| 2 | 338 | 18 | - | 5.3% |
-| 3 | 729 | 39 | - | 5.3% |
-| 4 | 218 | 11 | - | 5.0% |
-| 5 | 1,908 | 101 | - | 5.3% |
-| 6 | 506 | 27 | - | 5.3% |
-| 7 | 343 | 18 | - | 5.2% |
-| 8 | 27 | 1 | - | 3.7% |
-| 9 | 6 | 0 | - | 0.0% |
-| **Total** | **4,279** | **226** | **480** | **5.0%** |
+| Difficulty | Train | Validation |
+|------------|-------|------------|
+| 1 | 204 | 11 |
+| 2 | 338 | 18 |
+| 3 | 729 | 39 |
+| 4 | 218 | 11 |
+| 5 | 1,908 | 101 |
+| 6 | 506 | 27 |
+| 7 | 343 | 18 |
+| 8 | 27 | 1 |
+| 9 | 6 | 0 |
+| **Total** | **4,279** | **226** |
 
-**Split Ratio:** Percentage of training data moved to validation (stratified by difficulty)
+Stratified split by difficulty to maintain balanced distribution.
 
 **Split Method:** Stratified sampling to maintain difficulty distribution across train/validation/test sets.
 
