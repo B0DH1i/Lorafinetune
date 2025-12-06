@@ -21,17 +21,20 @@ LoRA fine-tuning of Qwen2.5-Coder-1.5B-Instruct on DEEP-5K dataset for competiti
 
 ### Difficulty Distribution
 
-| Difficulty | Train | Validation | Test | Train % | Val % |
-|------------|-------|------------|------|---------|-------|
-| 1 | 204 | 11 | - | 4.8% | 4.9% |
-| 2 | 338 | 18 | - | 7.9% | 8.0% |
-| 3 | 729 | 39 | - | 17.0% | 17.3% |
-| 4 | 218 | 11 | - | 5.1% | 4.9% |
-| 5 | 1,908 | 101 | - | 44.6% | 44.7% |
-| 6 | 506 | 27 | - | 11.8% | 11.9% |
-| 7 | 343 | 18 | - | 8.0% | 8.0% |
-| 8 | 27 | 1 | - | 0.6% | 0.4% |
-| 9 | 6 | 0 | - | 0.1% | 0.0% |
+| Difficulty | Train | Validation | Test | Split Ratio |
+|------------|-------|------------|------|-------------|
+| 1 | 204 | 11 | 480 | 5.4% |
+| 2 | 338 | 18 | - | 5.3% |
+| 3 | 729 | 39 | - | 5.3% |
+| 4 | 218 | 11 | - | 5.0% |
+| 5 | 1,908 | 101 | - | 5.3% |
+| 6 | 506 | 27 | - | 5.3% |
+| 7 | 343 | 18 | - | 5.2% |
+| 8 | 27 | 1 | - | 3.7% |
+| 9 | 6 | 0 | - | 0.0% |
+| **Total** | **4,279** | **226** | **480** | **5.0%** |
+
+**Split Ratio:** Percentage of training data moved to validation (stratified by difficulty)
 
 **Split Method:** Stratified sampling to maintain difficulty distribution across train/validation/test sets.
 
