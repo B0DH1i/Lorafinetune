@@ -9,24 +9,25 @@ LoRA fine-tuning of Qwen2.5-Coder-1.5B-Instruct on DEEP-5K dataset for competiti
 
 ## Dataset Split
 
-- **Train:** 4,279 examples (95%)
-- **Validation:** 226 examples (5%)
+- **Train:** 4,279 examples
+- **Validation:** 226 examples
 - **Test:** 480 examples
+- **Total:** 4,985 examples
 
 ### Difficulty Distribution
 
-| Difficulty | Train | Validation |
-|------------|-------|------------|
-| 1 | 204 | 11 |
-| 2 | 338 | 18 |
-| 3 | 729 | 39 |
-| 4 | 218 | 11 |
-| 5 | 1,908 | 101 |
-| 6 | 506 | 27 |
-| 7 | 343 | 18 |
-| 8 | 27 | 1 |
-| 9 | 6 | 0 |
-| **Total** | **4,279** | **226** |
+| Difficulty | Train | Validation | Test |
+|------------|-------|------------|------|
+| 1 | 204 | 11 | 20 |
+| 2 | 338 | 18 | 36 |
+| 3 | 729 | 39 | 67 |
+| 4 | 218 | 11 | 18 |
+| 5 | 1,908 | 101 | 238 |
+| 6 | 506 | 27 | 61 |
+| 7 | 343 | 18 | 24 |
+| 8 | 27 | 1 | 16 |
+| 9 | 6 | 0 | 0 |
+| **Total** | **4,279** | **226** | **480** |
 
 Stratified split by difficulty to maintain balanced distribution.
 
