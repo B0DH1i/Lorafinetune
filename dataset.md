@@ -33,33 +33,6 @@ Stratified split by difficulty to maintain balanced distribution.
 
 **Split Method:** Stratified sampling to maintain difficulty distribution across train/validation/test sets.
 
-## Training Configuration
-
-### LoRA Parameters
-- **r:** 32
-- **alpha:** 64
-- **dropout:** 0.15
-- **target_modules:** q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj
-
-### Training Parameters
-- **epochs:** 3
-- **learning_rate:** 3e-5
-- **batch_size:** 4 × 4 = 16 (effective)
-- **max_length:** 1024 tokens
-- **optimizer:** AdamW (fused)
-- **scheduler:** Cosine with 15% warmup
-- **early_stopping:** patience=2
-
-See [DEEP_TRAINING_CONFIG.md](DEEP_TRAINING_CONFIG.md) for full configuration.
-
-## Results
-
-### Training Metrics
-- **Best Checkpoint:** checkpoint-700
-- **Best Validation Loss:** 0.7054
-- **Training Time:** 33 minutes
-- **Total Steps:** 804
-
 
 
 
