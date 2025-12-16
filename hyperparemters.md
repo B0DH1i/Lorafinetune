@@ -60,49 +60,6 @@ See [DEEP_TRAINING_CONFIG.md](DEEP_TRAINING_CONFIG.md) for full configuration.
 - **Training Time:** 33 minutes
 - **Total Steps:** 804
 
-### Benchmark Performance
-- **Accuracy:** 25% (2/8 correct)
-- **Test Loss:** 0.7054
 
-See [DEEP_BENCHMARK_COMPARISON.md](DEEP_BENCHMARK_COMPARISON.md) for detailed results.
 
-## Files
 
-- `train_deep.py` - Training script
-- `DEEP_TRAINING_CONFIG.md` - Full hyperparameters
-- `DEEP_BENCHMARK_COMPARISON.md` - Benchmark results
-- `deep_training_visualization.png` - Training curves
-
-## Usage
-
-```python
-from transformers import AutoModelForCausalLM, AutoTokenizer
-from peft import PeftModel
-
-# Load model
-base_model = AutoModelForCausalLM.from_pretrained("Qwen/Qwen2.5-Coder-1.5B-Instruct")
-model = PeftModel.from_pretrained(base_model, "path/to/checkpoint-700")
-tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen2.5-Coder-1.5B-Instruct")
-
-# Generate
-prompt = "You are an expert Python programmer. Please read the problem carefully before writing any Python code.\n\nProblem:\n[problem]\n\nSolution:\n"
-inputs = tokenizer(prompt, return_tensors="pt")
-outputs = model.generate(**inputs, max_new_tokens=512)
-print(tokenizer.decode(outputs[0]))
-```
-
-## Training
-
-```bash
-python train_deep.py
-```
-
-## Requirements
-
-```
-transformers
-peft
-datasets
-torch
-sklearn
-```
