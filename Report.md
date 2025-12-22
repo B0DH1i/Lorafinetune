@@ -38,10 +38,10 @@ We saved and evaluated 8 checkpoints (Step 200-804) for each model. For optimal 
 
 **Benchmark Results:**
 
-| Model | Pass@1 Score | Problems Solved | Success Rate |
-|-------|-------------|----------------|--------------|
-| Deep Step 700 | 25% | 6/24 | 25% |
-| Diverse Step 500 | 29.2% | 7/24 | 29.2% |
+| Model | Pass@1 Score | Problems Solved |
+|-------|-------------|----------------|
+| Deep Step 700 | 25% | 6/24 |
+| Diverse Step 500 | 29.2% | 7/24 ||
 
 ## Analysis Methodology
 
@@ -126,5 +126,6 @@ Both models failed on:
 ## Conclusion
 
 This study demonstrates that **solution diversity is more valuable than problem diversity** in code generation models. Models that learn to solve the same problem with different approaches outperform models exposed to more unique problems.
+
 
 This finding can guide future dataset creation and model training strategies.
