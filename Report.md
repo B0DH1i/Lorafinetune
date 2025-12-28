@@ -43,15 +43,15 @@ We saved and evaluated 8 checkpoints (Step 200-804) for each model. For optimal 
 | Deep Step 700 | 25% | 6/24 |
 | Diverse Step 500 | 29.2% | 7/24 |
 
-### Critical Insights from Detailed Analysis
+### Key Insights from Analysis
 
-**The Learning Breakthrough Phenomenon**
+**Learning Through Barriers**
 
-The most striking finding is Diverse's ability to push through learning barriers where Deep gets stuck. In Problem 2 (string comparison), Deep remained trapped at 67% success across multiple checkpoints, unable to handle edge cases with different string lengths. Meanwhile, Diverse eventually figured out the complete logic, reaching 100% success. This suggests that seeing multiple solution approaches helps models overcome conceptual barriers that single-solution training struggles with.
+The most striking finding is Diverse's ability to push through learning barriers where Deep gets stuck. In Problem 2 (string comparison), Deep remained trapped with partial solutions across multiple checkpoints, unable to handle edge cases with different string lengths. Meanwhile, Diverse eventually figured out the complete logic and solved the problem fully. This suggests that seeing multiple solution approaches helps models overcome conceptual barriers that single-solution training struggles with.
 
 **Stability vs. Exploration Trade-offs**
 
-A concerning pattern emerged with Deep's learning instability. In Problem 6 (character counting), Deep actually regressed from a previously learned correct solution back to a flawed approach - a form of catastrophic forgetting. Diverse maintained stable performance throughout training. This indicates that while Deep's broader problem exposure might encourage more exploration, it can be harmful when it overwrites good solutions.
+A concerning pattern emerged with Deep's learning instability. In Problem 6 (character counting), Deep actually regressed from a previously learned correct solution back to a flawed approach - it forgot what it had learned. Diverse maintained stable performance throughout training. This indicates that while Deep's broader problem exposure might encourage more exploration, it can be harmful when it overwrites good solutions.
 
 **Quality Over Quantity in Success**
 
@@ -63,9 +63,9 @@ Both models hit identical walls on advanced problems. Complex geometry (Problem 
 
 **Implementation Philosophy Differences**
 
-When Deep succeeds, it tends to be more thorough in implementation details (as seen in Problem 3's complete pattern specification). However, this thoroughness comes at the cost of breakthrough capability and stability. Diverse focuses on getting to working solutions and maintaining them, even if they're not as specification-complete.
+When Deep succeeds, it tends to be more thorough in implementation details (as seen in Problem 3's complete pattern specification). However, this thoroughness comes at the cost of learning ability and stability. Diverse focuses on getting to working solutions and maintaining them, even if they're not as specification-complete.
 
-## Analysis Methodology
+## Analysis Method
 
 **Individual Model Analysis:**
 - Problem-by-problem performance tracking for each checkpoint
@@ -77,29 +77,29 @@ When Deep succeeds, it tends to be more thorough in implementation details (as s
 - Deep vs Diverse optimal checkpoint comparison
 - Problem-specific strengths and weaknesses
 - Code quality assessment
-- Breakthrough learning capability analysis
+- Learning capability analysis
 
 ## Key Findings
 
 ### Diverse Instruction Advantages
 
-**1. Breakthrough Learning Capability**
-- **Problem 2 (String Comparison)**: Achieved 100% success while Deep remained stuck at 67%
+**1. Learning Capability**
+- **Problem 2 (String Comparison)**: Solved the problem completely while Deep remained stuck with partial solutions
 - Demonstrated ability to overcome conceptual barriers that Deep couldn't break through
 - Better edge case handling and logical reasoning development
 
 **2. Strong Learning Stability**
-- **Problem 6 (Character Counting)**: Maintained working solution while Deep suffered catastrophic regression
-- Zero instances of catastrophic forgetting across all problems
-- Consistent high code quality (strong performance on 5/6 problems vs Deep's 3/6)
+- **Problem 6 (Character Counting)**: Maintained working solution while Deep lost its previous learning
+- Zero instances of forgetting learned solutions across all problems
+- Consistent high code quality across most problems compared to Deep's more variable performance
 
 **3. Better Error Profile**
-- 5/6 error-free solutions vs Deep's 3/6
+- More error-free solutions compared to Deep
 - No algorithm errors (Deep had multiple algorithm failures)
 - When Diverse fails, it fails cleanly rather than producing buggy partial solutions
 
 **4. Better Overall Reliability**
-- Higher success rate: 5/6 vs 4/6 problems solved
+- Higher success rate compared to Deep
 - More predictable performance patterns
 - Either solves completely or fails clearly (no misleading partial successes)
 
@@ -112,7 +112,7 @@ When Deep succeeds, it tends to be more thorough in implementation details (as s
 
 **2. Specification Adherence**
 - When Deep succeeds, it tends to implement the full specification requirements
-- More comprehensive pattern recognition in successful cases
+- More complete pattern recognition in successful cases
 - Higher attention to implementation details
 
 ### Common Limitations
@@ -137,8 +137,8 @@ When Deep succeeds, it tends to be more thorough in implementation details (as s
 - **Multiple Solution Exposure**: Seeing 5 different approaches for the same problem builds deeper understanding
 - **Enhanced Pattern Recognition**: Better ability to identify and handle edge cases
 - **Improved Generalization**: More robust internal representations lead to better problem-solving
-- **Learning Stability**: Reduced catastrophic forgetting and more consistent performance
-- **Breakthrough Capability**: Ability to overcome conceptual barriers that single-solution training cannot break
+- **Learning Stability**: Less forgetting and more consistent performance
+- **Learning Ability**: Ability to overcome conceptual barriers that single-solution training cannot break
 
 ## Technical Details
 
