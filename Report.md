@@ -144,7 +144,7 @@ When Deep succeeds, it tends to be more thorough in implementation details (as s
 
 **Base Model**: Qwen2.5-Coder-1.5B-Instruct
 **Training Examples**: ~4,500 per model (after train/val/test split)
-**Evaluation**: 24 AtCoder problems (Aug 2024 - Feb 2025)
+**Evaluation**: 24 AtCoder problems 
 **Analysis Tools**: Custom Python scripts for error classification, visualization, comparison
 
 **Trained Models:**
@@ -170,4 +170,5 @@ This study demonstrates that **solution diversity is more valuable than problem 
 
 
 This finding can guide future dataset creation and model training strategies.
+
 
